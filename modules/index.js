@@ -3,8 +3,6 @@ let blogs = require("./blogs")
 let tag = require("./tag")
 let daily = require("./daily")
 let comment = require("./comment")
-blogs.belongsTo(tag);
-tag.hasMany(blogs);
 
 async function test() {
     try {

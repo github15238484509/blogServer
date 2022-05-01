@@ -23,6 +23,7 @@
     "sequelize": "^6.19.0"
   },
   "devDependencies": {
+    "mockjs": "^1.1.0",
     "nodemon": "^2.0.16"
   }
 }

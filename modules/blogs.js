@@ -1,5 +1,6 @@
 let db = require("./db")
 const { DataTypes } = require("sequelize")
+let tag = require("./tag")
 let blogs = db.define("Blogs", {
     title: {
         type: DataTypes.STRING,
@@ -9,11 +10,16 @@ let blogs = db.define("Blogs", {
         type: DataTypes.TEXT,
         allowNull: false
     },
-    // tag: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false,
-    //     comment: '分类名称的id'
-    // },
+    tags_id: {
+        type: DataTypes.INTEGER,
+        allowNull:false,
+        references: {
+          // 这是对另一个模型的参考
+          model: tag,
+          // 这是引用模型的列名
+          key: 'id',
+        }
+      },
 }, {
     paranoid: true
 })
