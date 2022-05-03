@@ -3,7 +3,10 @@ let blogs = require("./blogs")
 let tag = require("./tag")
 let daily = require("./daily")
 let comment = require("./comment")
-
+blogs.belongsTo(tag,{
+    foreignKey:"tags_id",
+    targetKey:"id"
+})
 async function test() {
     try {
         await db.sync({

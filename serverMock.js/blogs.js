@@ -1,7 +1,7 @@
 let mock = require("mockjs")
 let blogs = require("../modules/blogs")
 let data = mock.mock({
-    "list|10": [{
+    "list|100": [{
         title: '@word',
         content: "@paragraph",
         tags_id: '@increment'
